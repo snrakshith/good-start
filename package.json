@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "echo \"META START\" node ./src/gs.js",
-    "start": "echo \"START: process started\" && exit 1"
+    "prestart": "echo \"PRESTART\" node ./src/1.gs.js",
+    "start": "echo \"START\" && node ./src/2.copy-hell-to-root.js",
+    "poststart": "echo \"STOP\" && node ./src/3.nuke.js"
   },
   "keywords": [],
   "author": "Rakshith <snrakshith.97@gmail.com>",

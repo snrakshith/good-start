@@ -1,9 +1,12 @@
 node_modules/
 .hell/
 
-tailwind.config.js
+
 .eslintrc
-
-# Docker
-
+1.txt
+2.ts
+3.txt
+30.txt
 Dockerfile
+dummy.txt
+tailwind.config.js
