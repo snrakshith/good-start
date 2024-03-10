@@ -1,0 +1,16 @@
+{
+  "map": {
+    "configs": ".",
+    "defaults": "."
+  },
+  "configs": {
+    "eslint": "root",
+    "tailwind": {
+      "tailwind.config.js": "root"
+    }
+  },
+  "defaults": {
+    "test": "src/test",
+    "docker": "root"
+  }
+}

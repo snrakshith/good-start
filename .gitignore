@@ -1,0 +1,9 @@
+node_modules/
+.hell/
+
+tailwind.config.js
+.eslintrc
+
+# Docker
+
+Dockerfile

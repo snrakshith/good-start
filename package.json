@@ -1,0 +1,16 @@
+{
+  "name": "good-start",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "echo \"META START\" node ./src/gs.js",
+    "start": "echo \"START: process started\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rakshith <snrakshith.97@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  }
+}
