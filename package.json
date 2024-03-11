@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "prestart": "echo \"PRESTART\" node ./src/1.gs.js",
-    "start": "echo \"START\" && node ./src/2.copy-hell-to-root.js",
-    "poststart": "echo \"STOP\" && node ./src/3.nuke.js"
+    "gsCache": "node ./gs/clear-cache.js",
+    "prexj": "node ./src/1.gs.js",
+    "xj": "node ./src/2.copy-hell-to-root.js",
+    "postxj": "node ./src/3.nuke.js"
   },
   "keywords": [],
   "author": "Rakshith <snrakshith.97@gmail.com>",

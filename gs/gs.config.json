@@ -1,7 +1,13 @@
 {
-  "map": {
-    "configs": ".",
-    "defaults": "."
+  "runs_on": {
+    "default": ["start", "test", "build"],
+    "scripts": {
+      "pre": "node ./src/1.gs.js && node ./src/2.copy-hell-to-root.js",
+      "post": "node ./src/3.nuke.js"
+    },
+    "extends": {
+      "cmd": ["lint", "xj"]
+    }
   },
   "configs": {
     "eslint": "root",
