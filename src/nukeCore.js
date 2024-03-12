@@ -1,4 +1,4 @@
-import { executeCommand } from "./utils/execute-command";
+import { executeCommand } from "./utils/execute-command.js";
 
 // Function to run scripts sequentially
 async function runScripts() {

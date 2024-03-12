@@ -1,5 +1,5 @@
 import { resolve } from "path";
-import { executeCommand } from "./utils/execute-command";
+import { executeCommand } from "./utils/execute-command.js";
 
 const projectRoot = process.cwd();
 const scriptPath = resolve(projectRoot, "./scripts/update_gitignore.sh");

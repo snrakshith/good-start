@@ -1,7 +1,0 @@
-# !configs
-# !defaults
-
-!.eslintrc
-!Dockerfile
-!tailwind.config.js
-
