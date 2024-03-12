@@ -1,7 +1,7 @@
 import { writeFileSync } from "fs";
 import { resolve } from "path";
-import config from "../gs/gs.config.js";
-import packageJson from "../package.json" assert { type: "json" };
+import config from "../../gs/gs.config.js";
+import packageJson from "../../package.json" assert { type: "json" };
 
 // Know project root
 const projectRoot = process.cwd();
@@ -23,7 +23,7 @@ config.runs_on.extends.cmd.forEach((command) => {
 // Update package.json with pre and post scripts
 const packageJsonPath = resolve(projectRoot, "package.json");
 packageJson.scripts = {
-  gsCache: "node ./gs/clear-cache.js",
+  gsCache: "node ./src/core/clearCache.js",
   ...packageJson.scripts,
   ...preScripts,
   ...postScripts,

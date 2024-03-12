@@ -5,15 +5,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "gsCache": "node ./gs/clear-cache.js",
-    "prexj": "node ./src/1.gs.js",
-    "xj": "node ./src/2.copy-hell-to-root.js",
-    "postxj": "node ./src/3.nuke.js"
+    "gsCache": "node ./gs/core/clearCache.js",
+    "prexj": "node ./src/gsCore.js",
+    "xj": "====",
+    "postxj": "node ./src/nukeCore.js"
   },
   "keywords": [],
   "author": "Rakshith <snrakshith.97@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.2.0",
+    "yargs": "^17.7.2"
   }
 }
