@@ -46,7 +46,7 @@ jobs:
       - name: Publish the release to NPM
         run: npm publish --provenance --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
   # notify:
   #   needs: [publish]
   #   runs-on: ubuntu-latest
