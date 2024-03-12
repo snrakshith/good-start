@@ -1,6 +1,9 @@
 module.exports = {
   git: {
     commitMessage: "chore: Release v${version}",
+    push: true,
+    commit: true,
+    tag: true,
     tagName: "v${version}",
     requireCommits: true, // require commits since last tag
     requireCleanWorkingDir: true, // exits if local not upto date with remote or if workdir is unclean
