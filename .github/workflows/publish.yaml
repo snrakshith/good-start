@@ -44,7 +44,7 @@ jobs:
           tag: "v${{ steps.package-version.outputs.current-version }}"      
       ############# NPM RELEASE ##############
       - name: Publish the release to NPM
-        run: npm publish --provenance --access public
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
   # notify:
