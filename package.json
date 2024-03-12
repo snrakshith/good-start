@@ -1,15 +1,36 @@
 {
   "name": "good-start",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "A cli for managing node configs dynamically",
+  "main": "/src/gs.js",
   "type": "module",
+  "sideEffects": false,
+  "bin": {
+    "gs": "./src/gs.js"
+  },
+  "files": [
+    "scripts/**"
+  ],
   "scripts": {
     "demo": "--"
   },
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "node",
+    "node configs"
+  ],
   "author": "Rakshith <snrakshith.97@gmail.com>",
   "license": "MIT",
+  "peerDependencies": {
+    "fs-extra": "^11.2.0  || ^11.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snrakshith/good-start.git"
+  },
   "dependencies": {
     "fs-extra": "^11.2.0",
     "yargs": "^17.7.2"
