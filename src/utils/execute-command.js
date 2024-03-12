@@ -9,6 +9,7 @@ export function executeCommand(command) {
         return;
       }
       resolve(stdout);
+      console.log(stdout);
     });
   });
 }
