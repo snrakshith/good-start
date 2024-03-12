@@ -1,5 +1,5 @@
 {
-  "name": "good-start",
+  "name": "@byteblaze/good-start",
   "version": "0.0.3",
   "description": "A cli for managing node configs dynamically",
   "main": "/src/gs.js",
