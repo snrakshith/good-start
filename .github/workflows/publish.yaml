@@ -31,9 +31,9 @@ jobs:
       - name: get-npm-version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@main
-      - name: Extract release notes
-        id: extract-release-notes
-        uses: ffurrer2/extract-release-notes@v1
+      # - name: Extract release notes
+      #   id: extract-release-notes
+      #   uses: ffurrer2/extract-release-notes@v1
       # - name: Check versions
       #   run: node ./bin/check-build-version.js
       ############# TAG RELEASE ##############
