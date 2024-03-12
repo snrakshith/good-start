@@ -23,12 +23,12 @@ module.exports = {
       header: "# Changelog",
     },
   },
-  hooks: {
-    // runs lint before publishing
-    "before:init": ["pnpm lint"],
-    // build the package to publish and the generate a tarball for use in github releases
-    "after:bump": "pnpm build && pnpm tarball",
-    "after:release":
-      "echo Successfully created a release v${version} for ${repo.repository}.",
-  },
+  // hooks: {
+  //   // runs lint before publishing
+  //   "before:init": ["pnpm lint"],
+  //   // build the package to publish and the generate a tarball for use in github releases
+  //   "after:bump": "pnpm build && pnpm tarball",
+  //   "after:release":
+  //     "echo Successfully created a release v${version} for ${repo.repository}.",
+  // },
 };
