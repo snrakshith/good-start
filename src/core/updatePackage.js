@@ -24,6 +24,7 @@ config.runs_on.extends.cmd.forEach((command) => {
 const packageJsonPath = resolve(projectRoot, "package.json");
 packageJson.scripts = {
   gsCache: "node ./src/core/clearCache.js",
+  updatePkg: "node -e \"require('gs').updatePkg()\"",
   ...packageJson.scripts,
   ...preScripts,
   ...postScripts,

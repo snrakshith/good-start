@@ -2,6 +2,7 @@ import yargs from "yargs";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { executeCommand } from "./utils/execute-command.js";
 
 const { mkdir } = fs.promises;
 
@@ -27,17 +28,42 @@ const argv = yargs(process.argv.slice(2))
         return true;
       });
   })
+  .option("start", {
+    describe: "Run gsCore.js file in src folder",
+    type: "boolean",
+  })
+  .option("update-package", {
+    describe: "Run updatePackage.js file in the core subfolder of src folder",
+    type: "boolean",
+  })
+  .option("nuke", {
+    describe: "Run nukeCore.js file in the src folder",
+    type: "boolean",
+  })
   .help()
   .alias("help", "h").argv;
 
 async function main() {
   try {
     const rootDir = process.cwd();
-    const templateFolder = argv.default ? "default" : "clean"; // Use default or clean based on provided options
-    await copySampleFolders(rootDir, templateFolder);
-    console.log("Initialization completed successfully.");
+
+    if (argv._.includes("init")) {
+      const templateFolder = argv.default ? "default" : "clean"; // Use default or clean based on provided options
+      await copySampleFolders(rootDir, templateFolder);
+      console.log("Initialization completed successfully.");
+    } else if (argv.start) {
+      await executeCommand("node ./src/gsCore.js");
+    } else if (argv["update-package"]) {
+      await executeCommand("node ./src/core/updatePackage.js");
+    } else if (argv.nuke) {
+      await executeCommand("node ./src/nukeCore.js");
+    } else {
+      console.log(
+        'Please provide a valid command. Use "--help" for usage information.'
+      );
+    }
   } catch (error) {
-    console.error("Error occurred during initialization:", error);
+    console.error("Error occurred:", error);
   }
 }
 

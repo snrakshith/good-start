@@ -5,10 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "gsCache": "node ./gs/core/clearCache.js",
-    "prexj": "node ./src/gsCore.js",
-    "xj": "====",
-    "postxj": "node ./src/nukeCore.js"
+    "demo": "--"
   },
   "keywords": [],
   "author": "Rakshith <snrakshith.97@gmail.com>",
