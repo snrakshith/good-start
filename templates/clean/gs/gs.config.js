@@ -3,10 +3,10 @@ export default {
     default: ["start"], // "test", "build"
     scripts: {
       pre: "node -e \"require('gs').gsCore()\"",
-      post: "node -e \"require('gs').nuke()\"",
+      post: "node -e \"require('gs').nukeCore()\"",
     },
     extends: {
-      cmd: ["xj"], // custom commands
+      cmd: [""], // custom commands
     },
   },
 };
