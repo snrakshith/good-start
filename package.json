@@ -1,6 +1,6 @@
 {
   "name": "@byteblaze/good-start",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A cli for managing node configs dynamically",
   "main": "/src/gs.js",
   "type": "module",
@@ -9,7 +9,8 @@
     "gs": "./src/gs.js"
   },
   "files": [
-    "scripts/**"
+    "scripts/**",
+    "src/**"
   ],
   "scripts": {
     "release:dry": "release-it --dry-run --no-npm",
