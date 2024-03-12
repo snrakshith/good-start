@@ -9,7 +9,8 @@
     "gs": "./src/gs.js"
   },
   "files": [
-    "scripts/**"
+    "scripts/**",
+    "src/**"
   ],
   "scripts": {
     "release:dry": "release-it --dry-run --no-npm",
