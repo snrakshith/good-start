@@ -1,6 +1,6 @@
 {
   "name": "good-start",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A cli for managing node configs dynamically",
   "main": "/src/gs.js",
   "type": "module",
