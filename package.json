@@ -12,7 +12,12 @@
     "scripts/**"
   ],
   "scripts": {
-    "demo": "--"
+    "release:dry": "release-it --dry-run --no-npm",
+    "release:info": "release-it --release-version",
+    "release:beta:no-npm": "release-it --preRelease=beta --no-npm",
+    "release:beta": "release-it --preRelease=beta",
+    "release:no-npm": "release-it --no-npm",
+    "release": "release-it"
   },
   "keywords": [
     "cli",
@@ -31,8 +36,40 @@
     "type": "git",
     "url": "https://github.com/snrakshith/good-start.git"
   },
+  "bugs": {
+    "url": "https://github.com/snrakshith/good-start/issues"
+  },
   "dependencies": {
-    "fs-extra": "^11.2.0",
+    "fs-extra": "^11.2.0  || ^11.0.0",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
+    "release-it": "^17.1.1"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): v${version}",
+      "push": true,
+      "commit": true,
+      "tag": true,
+      "requireCommits": false,
+      "requireCleanWorkingDir": false
+    },
+    "github": {
+      "release": true,
+      "draft": true
+    },
+    "npm": {
+      "publish": false,
+      "ignoreVersion": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md",
+        "header": "# Changelog"
+      }
+    }
   }
 }
